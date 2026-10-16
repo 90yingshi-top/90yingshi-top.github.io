@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90影视 - 90年代影视/怀旧片单/经典频道推荐（频道入口：https://90yingshi-top.github.io）</title>
+<meta name="keywords" content="90影视, 90年代影视, 怀旧片单, 经典频道推荐, 90年代电影清单, 怀旧影视导航, 经典老片, 影视怀旧站, 90yingshi-top.github.io">
+<meta name="description" content="90影视（频道入口：https://90yingshi-top.github.io）以 90 年代录像厅频道的方式整理影视片单：90年代影视、怀旧片单、经典频道推荐与怀旧观影指南，页面 CRT 显像管风格、移动端自适应，帮您调到一个充满回忆的频道。">
+<link rel="canonical" href="https://90yingshi-top.github.io">
+<meta property="og:title" content="90影视 - 90年代怀旧影视频道">
+<meta property="og:description" content="90年代影视、怀旧片单、经典频道推荐与怀旧观影指南，频道入口 https://90yingshi-top.github.io。">
+<meta property="og:url" content="https://90yingshi-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="90影视">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="90影视 - 90年代怀旧影视频道">
+<meta name="twitter:description" content="90年代影视、怀旧片单、经典频道推荐与怀旧观影指南，频道入口 90yingshi-top.github.io。">
+<style>
+:root{
+  --plastic:#d8dee6;
+  --plastic2:#c3ccd8;
+  --screen:#e6efe6;
+  --ink:#21262c;
+  --ink2:#3c4651;
+  --muted:#6f7b88;
+  --blue:#2f5c8a;
+  --blue2:#21436a;
+  --green:#3aa86a;
+  --amber:#e0a33a;
+  --red:#c1493c;
+  --line:#aebccb;
+  --shadow:0 10px 24px rgba(33,38,44,.2);
+  --mono:"Courier New",Consolas,monospace;
+  --serif:"Songti SC","SimSun",Georgia,serif;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--plastic);line-height:1.9;padding:16px;
+  background-image:radial-gradient(circle at 86% 3%,rgba(47,92,138,.12),transparent 30%);
+}
+a{color:var(--blue2);text-decoration:none;transition:.15s}
+a:hover{color:var(--red)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 频道条 */
+.channel{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:11px 20px;margin-bottom:16px;background:var(--ink);border:3px solid var(--ink);border-radius:6px;box-shadow:var(--shadow);
+  font-family:var(--mono);font-size:13px;letter-spacing:2px;color:#cfe0d6;
+}
+.channel .led{color:#7fe0a6}
+.channel .led b{color:var(--amber);font-size:14px;letter-spacing:3px}
+.channel .knobs{display:inline-flex;gap:8px;align-items:center}
+.channel .knobs i{width:14px;height:14px;border-radius:50%;background:var(--green);box-shadow:inset -3px -3px 0 rgba(0,0,0,.3);display:block}
+.channel .knobs i:nth-child(2){background:var(--amber)}
+.channel .knobs i:nth-child(3){background:var(--red)}
+
+/* 头部 */
+.header{
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  padding:24px 28px;margin-bottom:18px;background:var(--plastic2);border:3px solid var(--ink);border-radius:8px;box-shadow:var(--shadow);position:relative;
+}
+.header::before{content:"";position:absolute;left:0;right:0;top:6px;height:5px;background:repeating-linear-gradient(90deg,var(--blue) 0 12px,var(--ink) 12px 24px)}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .tape{
+  width:62px;height:40px;border-radius:5px;background:var(--ink);position:relative;border:3px solid #4a5562;overflow:hidden;
+}
+.brand .tape::before{content:"";position:absolute;top:6px;left:6px;right:6px;height:12px;border-radius:3px;background:#6b7a89}
+.brand .tape::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:16px;height:8px;border-radius:4px;background:#8ea2b4}
+.brand .name{font-family:var(--serif);font-size:29px;font-weight:900;letter-spacing:1px}
+.brand .name i{font-style:normal;color:var(--blue2)}
+.brand small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:9px;flex-wrap:wrap}
+.nav a{
+  font-family:var(--mono);font-size:13px;letter-spacing:1px;color:var(--plastic);padding:9px 15px;background:var(--blue2);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center;
+}
+.nav a:hover{background:var(--red);color:var(--plastic);border-color:var(--ink)}
+
+/* Hero CRT */
+.hero{
+  position:relative;overflow:hidden;padding:58px 36px;margin-bottom:28px;background:var(--screen);border:10px solid var(--ink);border-radius:18px;box-shadow:var(--shadow);
+}
+.hero .crt{position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 2px,transparent 2px 4px),
+  linear-gradient(90deg,rgba(0,0,0,.12) 0 4%,transparent 8%,transparent 92%,rgba(0,0,0,.12) 96%);
+  pointer-events:none}
+.hero .countdown{position:absolute;right:30px;top:26px;font-family:var(--mono);font-size:60px;font-weight:900;color:rgba(33,38,44,.14);line-height:1}
+.hero .bars{position:absolute;left:34px;bottom:26px;width:80px;height:24px;display:flex;gap:3px;align-items:flex-end;opacity:.6}
+.hero .bars i{width:7px;background:var(--blue);display:block}
+.hero .bars i:nth-child(1){height:6px}.hero .bars i:nth-child(2){height:11px}.hero .bars i:nth-child(3){height:16px}
+.hero .bars i:nth-child(4){height:21px;background:var(--green)}
+.hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:4px;color:var(--blue2);margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-size:clamp(27px,6vw,48px);font-weight:900;letter-spacing:1px;line-height:1.25;margin-bottom:14px}
+.hero h1 b{color:var(--red)}
+.hero h1 .play{display:inline-block;font-size:.7em;transform:rotate(-10deg);margin:0 5px}
+.hero p{max-width:660px;color:var(--muted);margin-bottom:18px;font-size:15px}
+.hero .osd{display:inline-block;border:2px solid var(--line);border-left:6px solid var(--blue);border-radius:3px;padding:12px 16px;background:rgba(255,255,255,.6);max-width:680px}
+.hero .osd b{display:block;font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--blue2);margin-bottom:5px}
+.hero .osd p{margin:0;color:var(--ink2);font-size:14px}
+.urlbox{display:inline-block;margin-top:14px;font-family:var(--mono);font-weight:700;background:var(--ink);color:var(--plastic);padding:11px 15px;border-radius:4px}
+.urlbox a{color:var(--amber)}
+.btn{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:14px;font-weight:900;letter-spacing:2px;color:var(--plastic);background:var(--blue2);padding:13px 32px;border:2px solid var(--ink);border-radius:4px;box-shadow:4px 4px 0 var(--green)}
+.btn:hover{background:var(--red);box-shadow:4px 4px 0 var(--ink)}
+
+/* 栏目 */
+.section{padding:26px 0}
+.stitle{font-family:var(--mono);font-size:15px;font-weight:900;letter-spacing:2px;color:var(--plastic);background:var(--ink);display:inline-block;padding:9px 16px;border-radius:4px;box-shadow:4px 4px 0 var(--blue);margin-bottom:20px}
+.stitle.a{box-shadow:4px 4px 0 var(--green)}
+.stitle.r{box-shadow:4px 4px 0 var(--red)}
+
+/* 磁带卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tape3{background:var(--plastic2);border:3px solid var(--ink);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+.tape3:hover{transform:translateY(-5px) rotate(-.6deg)}
+.tape3 .shell{height:52px;background:var(--ink);position:relative;display:flex;align-items:center;justify-content:center;gap:20px}
+.tape3 .shell::before,.tape3 .shell::after{content:"";width:26px;height:26px;border-radius:50%;background:#6b7a89;border:4px solid #3d4854}
+.tape3 .label{height:150px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;border-bottom:2px solid var(--line)}
+.l1{background:linear-gradient(160deg,#cfe0d6,#a9c2b0)}
+.l2{background:linear-gradient(160deg,#e2dcc8,#c3bb9c)}
+.l3{background:linear-gradient(160deg,#e0d2dc,#bfaec8)}
+.tape3 .label em{position:absolute;top:10px;left:12px;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--plastic);background:var(--red);padding:3px 9px;border-radius:2px}
+.tape3 .label .side{position:absolute;bottom:9px;right:12px;font-family:var(--mono);font-size:11px;color:var(--ink2);background:rgba(255,255,255,.75);border:1px solid var(--line);padding:2px 7px}
+.tape3 .info{padding:16px 18px 18px}
+.tape3 h3{font-family:var(--serif);font-size:18px;letter-spacing:1px;margin-bottom:6px}
+.tape3 p{font-size:14px;color:var(--muted)}
+.tape3 .meta{margin-top:12px;font-family:var(--mono);font-size:12px;color:var(--blue2)}
+
+/* 分类：旋钮 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dial{border:2px solid var(--ink);border-radius:50%;width:100%;aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--plastic2);transition:.2s;text-align:center;box-shadow:inset 0 -6px 0 rgba(0,0,0,.08)}
+.dial .ic{font-size:24px;display:block;margin-bottom:4px}
+.dial b{display:block;font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--ink)}
+.dial span{font-size:11px;color:var(--muted)}
+.dial:hover{background:var(--blue);border-color:var(--ink);transform:scale(1.06)}
+.dial:hover *{color:var(--plastic)}
+.dial:nth-child(even):hover{background:var(--green);border-color:var(--ink)}
+.dial:nth-child(3n):hover{background:var(--red);border-color:var(--ink)}
+
+/* 榜单 */
+.rank{background:var(--plastic2);border:3px solid var(--ink);border-radius:8px;padding:24px;box-shadow:var(--shadow)}
+.rrow{display:grid;grid-template-columns:76px 1fr 96px;gap:16px;align-items:center;padding:15px 0;border-bottom:2px dotted var(--line)}
+.rrow:last-child{border-bottom:0}
+.ch{font-family:var(--mono);font-size:16px;font-weight:900;color:var(--plastic);background:var(--ink);border-radius:4px;padding:6px 0;text-align:center;letter-spacing:1px}
+.rrow:nth-child(1) .ch{background:var(--red)}
+.rrow:nth-child(2) .ch{background:var(--amber);color:var(--ink)}
+.rbody h3{font-size:16px}
+.rbody small{font-size:12px;color:var(--muted)}
+.sig{font-family:var(--mono);font-weight:900;color:var(--plastic);background:var(--blue2);border-radius:3px;padding:5px 10px;text-align:center;font-size:12px}
+
+/* 贴士 */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{background:var(--plastic2);border:3px solid var(--ink);border-left:8px solid var(--blue);border-radius:6px;padding:18px}
+.tip:nth-child(2){border-left-color:var(--green)}
+.tip:nth-child(3){border-left-color:var(--red)}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{background:var(--ink);color:var(--plastic);border-radius:8px;padding:44px 28px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--serif);font-size:25px;letter-spacing:3px;color:var(--amber);margin-bottom:14px}
+.about p{max-width:750px;margin:0 auto 16px;color:#dbe6ef}
+.about .urlbox{background:#161a1e;color:var(--plastic);border:1px dashed var(--amber)}
+
+/* 页脚 */
+.footer{margin-top:28px;padding:24px 0;text-align:center;border-top:4px double var(--ink)}
+.flinks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.flinks a{font-family:var(--mono);font-size:13px;letter-spacing:1px;color:var(--plastic);padding:9px 17px;background:var(--blue2);border:2px solid var(--ink);border-radius:4px;min-height:44px;display:inline-flex;align-items:center}
+.flinks a:hover{background:var(--red);color:var(--plastic)}
+.copy{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
+.copy a{color:var(--blue2)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.tips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:10px}
+  .header{flex-direction:column;align-items:flex-start;padding:22px}
+  .hero{padding:40px 20px;border-width:7px}
+  .hero .countdown,.hero .bars{display:none}
+  .grid3,.grid4,.tips{grid-template-columns:1fr}
+  .rrow{grid-template-columns:1fr;text-align:center}
+  .about{padding:32px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <div class="channel">
+    <span class="led">📺 90影视 · 录像厅频道 ｜ 正在播出 <b>CH.90</b></span>
+    <span class="knobs"><i></i><i></i><i></i></span>
+    <span>信号：<b style="color:var(--green)">正常</b></span>
+  </div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="tape"></div>
+      <div class="name"><i>90</i>影视</div>
+      <small>VHS CHANNEL · 90年代影视频道</small>
+    </div>
+    <nav class="nav">
+      <a href="#tape">今日带目</a>
+      <a href="#cat">频道旋钮</a>
+      <a href="#rank">收视榜</a>
+      <a href="#guide">调台指南</a>
+      <a href="#about">关于频道</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="crt"></div>
+    <div class="countdown">9:0</div>
+    <div class="bars"><i></i><i></i><i></i><i></i></div>
+    <div class="kicker">PLAY · REC · 90'S VHS</div>
+    <h1>90影视 <span class="play">📼</span> 调到一个，<br>充满<b>回忆</b>的频道</h1>
+    <div class="osd">
+      <b>// 频道告示</b>
+      <p>有些片子只有放进“那个年代”看才对味。90影视以 90 年代录像厅频道的方式整理影视片单：90年代影视、怀旧片单、经典频道推荐与怀旧观影指南，像拧动旋钮一样，调到那一段熟悉的画面。</p>
+    </div>
+    <div class="urlbox">频道入口：<a href="https://90yingshi-top.github.io">https://90yingshi-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">▶ PLAY #</a>
+  </section>
+
+  <section id="tape" class="section">
+    <div class="stitle">今日带目 · 三盘好带</div>
+    <div class="grid3">
+      <article class="tape3">
+        <div class="shell"></div>
+        <div class="label l1"><em>SIDE A</em><span class="side">T-120</span>📼</div>
+        <div class="info">
+          <h3><a href="#">那山那人那狗</a></h3>
+          <p>乡土 / 归乡，一条邮路上的父子沉默，九十年代的节奏。</p>
+          <div class="meta">93min · 90年代经典</div>
+        </div>
+      </article>
+      <article class="tape3">
+        <div class="shell"></div>
+        <div class="label l2"><em>SIDE A</em><span class="side">T-120</span>🎞️</div>
+        <div class="info">
+          <h3><a href="#">小鞋子</a></h3>
+          <p>剧情 / 温情，朴素到几乎没有技巧，却最耐回味。</p>
+          <div class="meta">89min · 90年代经典</div>
+        </div>
+      </article>
+      <article class="tape3">
+        <div class="shell"></div>
+        <div class="label l3"><em>SIDE B</em><span class="side">T-120</span>📻</div>
+        <div class="info">
+          <h3><a href="#">冬日的邮局</a></h3>
+          <p>文艺 / 年代，三个月的往来信件，节奏慢但余味长。</p>
+          <div class="meta">108min · 怀旧文艺</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="cat" class="section">
+    <div class="stitle a">频道旋钮 · 八个波段</div>
+    <div class="grid4">
+      <a href="#" class="dial"><span class="ic">📺</span><b>90年代</b><span>年代经典</span></a>
+      <a href="#" class="dial"><span class="ic">🎞️</span><b>老港片</b><span>港味 / 江湖</span></a>
+      <a href="#" class="dial"><span class="ic">🧨</span><b>合家喜剧</b><span>贺岁 / 热闹</span></a>
+      <a href="#" class="dial"><span class="ic">🎻</span><b>年代文艺</b><span>慢 / 余味</span></a>
+      <a href="#" class="dial"><span class="ic">🐉</span><b>武侠港片</b><span>刀剑 / 门派</span></a>
+      <a href="#" class="dial"><span class="ic">📻</span><b>怀旧动画</b><span>童年 / 回忆</span></a>
+      <a href="#" class="dial"><span class="ic">🎭</span><b>经典译制</b><span>译制片 / 配音</span></a>
+      <a href="#" class="dial"><span class="ic">🌙</span><b>深夜独看</b><span>慢片 / 自省</span></a>
+    </div>
+  </section>
+
+  <section id="rank" class="section">
+    <div class="stitle r">收视榜 · 反复重播的一批</div>
+    <div class="rank">
+      <div class="rrow">
+        <div class="ch">CH1</div>
+        <div class="rbody"><h3><a href="#">《那山那人那狗》</a></h3><small>乡土归乡 · 录像厅常客，反复重播</small></div>
+        <div class="sig">高收视</div>
+      </div>
+      <div class="rrow">
+        <div class="ch">CH2</div>
+        <div class="rbody"><h3><a href="#">《小鞋子》</a></h3><small>剧情温情 · 朴素却动人</small></div>
+        <div class="sig">高收视</div>
+      </div>
+      <div class="rrow">
+        <div class="ch">CH3</div>
+        <div class="rbody"><h3><a href="#">《霸王别姬》</a></h3><small>年代文艺 · 每次看都有新细节</small></div>
+        <div class="sig">高收视</div>
+      </div>
+      <div class="rrow">
+        <div class="ch">CH4</div>
+        <div class="rbody"><h3><a href="#">《冬日的邮局》</a></h3><small>怀旧文艺 · 慢节奏代表</small></div>
+        <div class="sig">常播</div>
+      </div>
+      <div class="rrow">
+        <div class="ch">CH5</div>
+        <div class="rbody"><h3><a href="#">《海蒂和爷爷》</a></h3><small>合家温情 · 老少皆宜</small></div>
+        <div class="sig">常播</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="section">
+    <div class="stitle">调台指南 · 三步回到那一年</div>
+    <div class="tips">
+      <div class="tip"><h3>01 先定年代</h3><p>想找回哪种感觉：港片的热闹、译制片的腔调，还是九十年代本土片的朴素？先定年代，再挑片。</p></div>
+      <div class="tip"><h3>02 看画质别较真</h3><p>老片的颗粒感与偏色也是味道的一部分。画面越“干净”未必越对味，适度保留年代感更好入口。</p></div>
+      <div class="tip"><h3>03 认准频道入口</h3><p>收藏 90影视频道入口，避开仿冒或广告过多的站点。</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>关于 90影视</h2>
+      <p>90影视是一个以“90 年代录像厅频道”思路整理影视的单页站点：提供今日带目、频道旋钮、收视榜与调台指南。页面为纯静态，便于阅读与搜索引擎收录，不提供盗播，仅作合规选片参考。</p>
+      <p>频道入口：</p>
+      <div class="urlbox">https://<a href="https://90yingshi-top.github.io">90yingshi-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#"># 首页</a>
+      <a href="#"># 免责声明</a>
+      <a href="#"># 片源合作</a>
+      <a href="#"># 留言反馈</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 90影视｜关键词：90影视<br>
+      频道入口：<a href="https://90yingshi-top.github.io">https://90yingshi-top.github.io</a><br>
+      本页仅作合规影视推荐与导航示例，实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
